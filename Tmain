@@ -1,0 +1,20 @@
+class Person {
+    void walk() {
+        System.out.println("Person is walking");
+    }
+}
+class Employee extends Person {
+    @Override
+    void walk() {
+        System.out.println("Employee is walking now.");
+    }
+}
+class Tmain {
+    public static void main(String[] args) 
+    {
+        Person person = new Person();
+        Employee employee = new Employee();
+        Person personRef = employee;
+        personRef.walk();
+    }
+}
