@@ -1,0 +1,16 @@
+public class StringBufferExample {
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("JAVA IS AN AUTOMATED CARBAGE COLLECTED LANGUAGE");
+        sb = new StringBuffer(sb.toString().toLowerCase());
+        sb.append(" that gives more power to java");
+        System.out.println("Modified String: " + sb);
+        String upperCaseString = sb.toString().toUpperCase();
+        System.out.println("Uppercase String: " + upperCaseString);
+        String originalString = sb.toString();
+        boolean isEqual = originalString.equals(upperCaseString);
+        System.out.println("Are the original and modified strings equal? " + isEqual);
+        String noSpacesString = sb.toString().replaceAll("\\s+", "");
+        System.out.println("String without spaces: " + noSpacesString);
+    }
+}
+
